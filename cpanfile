@@ -5,7 +5,6 @@ requires 'IO::Compress::Gzip';
 requires 'URI::Escape';
 requires 'Config::IniFiles';
 requires 'Try::Tiny';
-requires 'List::Util', '>= 1.45';
 
 test_requires 'Test::Warnings';
 test_requires 'Test::Differences';
@@ -31,6 +30,7 @@ feature 'assembly_mapping', 'Assembly mapper support' => sub {
 feature 'xref_mapping', 'Xref mapping pipeline' => sub {
   requires 'Config::IniFiles';
   requires 'Digest::MD5';
+  requires 'List::Util', '>= 1.45';
   requires 'Text::CSV';
   recommends 'Text::CSV_XS';
   requires 'Text::Glob';
